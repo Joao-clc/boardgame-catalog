@@ -11,23 +11,31 @@ public class BoardGame {
     private String name;
 
     public BoardGame(String id, String name) {
-        if (id == null || id.isBlank()) throw new IllegalArgumentException("id obrigatório");
-        if (name == null || name.isBlank()) throw new IllegalArgumentException("nome obrigatório");
+        if (id == null || id.isBlank()) 
+            throw new IllegalArgumentException("id obrigatório");
+        if (name == null || name.isBlank()) 
+            throw new IllegalArgumentException("nome obrigatório");
         this.id = id;
         this.name = name;
     }
 
-    public String getId() { return id; }
-    public String getName() { return name; }
+    public String getId() { 
+        return id; 
+    }
+    public String getName() { 
+        return name; 
+    }
     public void setName(String name) {
-        if (name == null || name.isBlank()) throw new IllegalArgumentException("nome obrigatório");
+        if (name == null || name.isBlank()) 
+            throw new IllegalArgumentException("nome obrigatório");
         this.name = name;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof BoardGame)) return false;
+        if (!(o instanceof BoardGame)) 
+            return false;
         BoardGame that = (BoardGame) o;
         return id.equals(that.id);
     }
